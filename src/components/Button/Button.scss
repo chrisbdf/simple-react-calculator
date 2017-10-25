@@ -1,0 +1,41 @@
+.component-button {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 33.3%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 20%;
+  @media(max-width: 800px) {
+    width: 50%;
+    height: 12.5%;
+    font-size: 20px;
+
+  }
+  @media(max-width: 300px) {
+    width: 100%;
+    font-size: 14px;
+
+  }
+  &.orange {
+    button {
+      color: #fff;
+      background-color: #f5923e;
+    }
+  }
+  button {
+    background-color: #e0e0e0;
+    cursor: pointer;
+    flex: 1 0 auto;
+    font-size: 30px;
+    border: 0.5px solid #858694;
+    outline: none;
+    padding: 0px;
+    &:active {
+      border: 0.5px solid #fff;
+    }
+  }
+}

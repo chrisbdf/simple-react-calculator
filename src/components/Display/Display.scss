@@ -1,0 +1,17 @@
+.component-calculator__display__container {
+  font-size: 70px;
+  padding: 20px 22px 0 10px;
+  background-color: #858694;
+  text-align: right;
+  color: #ffffff;
+  > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+}

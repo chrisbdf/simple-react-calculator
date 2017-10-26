@@ -2,7 +2,7 @@
 
 You can see the [demo](https://slavic18.github.io/simple-react-calculator/public/index.html) here.
 
-## How use
+## How to use
 
 ```bash
 # First, in your terminal, install dependencies 

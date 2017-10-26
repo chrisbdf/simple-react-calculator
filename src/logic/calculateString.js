@@ -47,11 +47,11 @@ export default function calculate(obj, operation) {
 
     // process operation
     if (allowedMathOperations.test(operation)) {
-        // replace last operation with the current
         // don't do anything for math operation before enter any number
         if (!obj.next) {
             return {}
         }
+        // replace last operation with the current
         if (obj.next && allowedMathOperations.test(last)) {
             return {
                 next: obj.next.replace(/.$/, operation)

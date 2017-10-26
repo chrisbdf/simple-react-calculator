@@ -9,6 +9,8 @@
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   height: 20%;
+
+  min-height: 40px;
   @media(max-width: 800px) {
     width: 50%;
     height: 12.5%;

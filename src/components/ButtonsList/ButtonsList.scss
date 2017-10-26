@@ -1,11 +1,13 @@
 .component-buttons__container {
   height: calc(100% - 101px);
   @media (max-width: 800px) {
+    height: calc(100% - 103px);
+
     .component-button:last-child {
       width: 100%;
     }
   }
   @media (max-width: 500px) {
-    height: calc(100% - 131px);
+    height: calc(100% - 148px);
   }
 }

@@ -9,8 +9,16 @@ class Button extends React.Component {
     handleClick() {
         this.props.clickHandler(this.props.operation);
     }
-    getClassName(){
-        return 'component-button ' + (this.props.orange ? 'orange' : '');
+
+    getClassName() {
+        let preparedClass = 'component-button ';
+        if (this.props.additionalClass) {
+            preparedClass += ' ' + this.props.additionalClass
+        }
+        if (this.props.active) {
+            preparedClass += ' active';
+        }
+        return preparedClass;
     }
 
     render() {
@@ -26,7 +34,8 @@ class Button extends React.Component {
 Button.propTypes = {
     operation: React.PropTypes.string,
     clickHandler: React.PropTypes.func,
-    orange: React.PropTypes.bool,
+    additionalClass: React.PropTypes.string,
+    active: React.PropTypes.bool,
 };
 
 export default Button;

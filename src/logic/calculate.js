@@ -1,9 +1,5 @@
-import operate from './operate';
-
-export function isNumber(number) {
-    return !!number.match(/[0-9]+/);
-}
-
+import operate from "./operate";
+import isNumber from "./isNumber";
 
 /**
  * Given a button name and a calculator data object, return an updated
@@ -28,12 +24,17 @@ export default function calculate(obj, operation) {
         if (operation === '0' && obj.next === '0') {
             return {};
         }
+        if (obj.next === '0') {
+            return {
+                next: operation
+            }
+        }
         // If there is an number, update next
         if (obj.operation) {
             if (obj.next) {
-                return { next: obj.next + operation };
+                return {next: obj.next + operation};
             }
-            return { next: operation };
+            return {next: operation};
         }
         // If there is no number, update next and clear the value
         if (obj.next) {
@@ -62,7 +63,7 @@ export default function calculate(obj, operation) {
     }
 
     // User pressed an operation button and there is an existing operation
-    if (obj.operation) {
+    if (obj.operation && obj.next) {
         return {
             total: operate(obj.total, obj.next, obj.operation),
             next: null,
@@ -72,7 +73,7 @@ export default function calculate(obj, operation) {
 
     // The user hasn't typed a number yet, just save the operation
     if (!obj.next) {
-        return { operation: operation };
+        return {operation: operation};
     }
 
     // save the operation and shift 'next' into 'total'

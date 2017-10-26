@@ -13,14 +13,14 @@ export default class ButtonsList extends React.Component {
 
     render() {
         return (
-            <div className="component-buttons__container">
+            <div className='component-buttons__container'>
                 <div>
                     {/*parse numbers*/}
                     {'1234567890'.split('').map(operation =>
                     <Button key={operation} operation={operation} clickHandler={this.handleClick}/>)}
                     {/*parse operations*/}
                     {'Cx-+='.split('').map(operation =>
-                        <Button key={operation} operation={operation} orange clickHandler={this.handleClick}/>)}
+                        <Button key={operation} operation={operation} additionalClass='orange' clickHandler={this.handleClick}/>)}
                 </div>
             </div>
         )

@@ -1,0 +1,15 @@
+.component-change_mode {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  @media(max-width: 500px) {
+    position: inherit;
+    .component-button {
+      height: 30px;
+      button {
+        border-radius: 0px;
+      }
+    }
+  }
+}

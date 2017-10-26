@@ -12,7 +12,9 @@
   @media(max-width: 800px) {
     width: 50%;
     height: 12.5%;
-    font-size: 20px;
+    button {
+      font-size: 18px;
+    }
 
   }
   @media(max-width: 300px) {
@@ -36,6 +38,21 @@
     padding: 0px;
     &:active {
       border: 0.5px solid #fff;
+    }
+  }
+  &.rounded {
+    button {
+      border-radius: 15px;
+      font-size: 15px;
+      padding: 5px 10px;
+    }
+  }
+  &.w-50 {
+    width: 50%;
+  }
+  &.active {
+    button {
+      background: #cee841;;
     }
   }
 }
